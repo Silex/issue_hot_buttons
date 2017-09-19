@@ -169,6 +169,12 @@ jQuery(document).ready(function() {
       var mirrored_label = mirrored_element.select('label').first();
       mirrored_label.writeAttribute('for', tmp_id);
       
+      if($(original_element).attr('id') == 'issue_due_date')
+      {
+        var relance_date = new Date();
+        relance_date.setDate(relance_date.getDate() + 7);
+        $(mirrored_element).find('input').attr('value', $.datepicker.formatDate(datepickerOptions.dateFormat, relance_date));
+      }
 
       // Special magic for calendar inputs
       var calendar_field = mirrored_element.select('img.calendar-trigger').first();
