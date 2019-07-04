@@ -620,6 +620,11 @@ jQuery(document).ready(function() {
         }
       });
       
+      // Log entry
+      $('#time_entry_activity_id').val(44);
+      $('#time_entry_hours').val('1m');
+      $('#time_entry_comments').val('Ticket');
+
       // Submit issue form!
       $P('issue-form').submit();
     }
